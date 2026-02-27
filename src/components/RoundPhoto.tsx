@@ -42,7 +42,7 @@ export default function RoundPhoto({ filename, roundNumber, totalRounds }: Round
       {/* Zoomed overlay — click to dismiss */}
       {zoomed && (
         <div
-          className="fixed inset-0 z-[1000] bg-black/85 flex items-center justify-center cursor-zoom-out px-4"
+          className="fixed inset-0 z-[2000] bg-black/85 flex items-center justify-center cursor-zoom-out px-4"
           onClick={() => setZoomed(false)}
         >
           <img
