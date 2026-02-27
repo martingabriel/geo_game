@@ -11,12 +11,11 @@ interface HomeFormProps {
 export default function HomeForm({ photos }: HomeFormProps) {
   const router = useRouter()
   const [name, setName] = useState('')
-  const [roundChoice, setRoundChoice] = useState<3 | 5 | 'all'>(photos.length >= 5 ? 5 : 3)
+  const [roundChoice, setRoundChoice] = useState<5 | 'all'>(5)
 
-  const roundOptions: Array<{ label: string; value: 3 | 5 | 'all' }> = []
-  if (photos.length >= 3) roundOptions.push({ label: '3 kola', value: 3 })
+  const roundOptions: Array<{ label: string; value: 5 | 'all' }> = []
   if (photos.length >= 5) roundOptions.push({ label: '5 kol', value: 5 })
-  roundOptions.push({ label: `Vše (${photos.length} fotek)`, value: 'all' })
+  roundOptions.push({ label: `Vše (${photos.length} fotek) ❤️❤️❤️`, value: 'all' })
 
   function handleStart() {
     if (!name.trim()) return
@@ -31,6 +30,7 @@ export default function HomeForm({ photos }: HomeFormProps) {
       photoIds: selected.map((p) => p.id),
       currentRound: 0,
       results: [],
+      ...(roundChoice === 'all' ? { livesRemaining: 3 } : {}),
     }
 
     sessionStorage.setItem('gameSession', JSON.stringify(session))

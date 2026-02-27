@@ -74,9 +74,14 @@ export default function GamePage() {
       points,
     }
 
-    const updatedSession: GameSession = {
+    let updatedSession: GameSession = {
       ...session,
       results: [...session.results, result],
+    }
+
+    // Decrement a life when the player guesses wrong in all-photos mode
+    if (tier === 'Far' && updatedSession.livesRemaining !== undefined) {
+      updatedSession = { ...updatedSession, livesRemaining: Math.max(0, updatedSession.livesRemaining - 1) }
     }
 
     setCurrentResult(result)
@@ -89,7 +94,7 @@ export default function GamePage() {
   function handleNextRound() {
     if (!session) return
     const nextRound = session.currentRound + 1
-    const isLast = nextRound >= session.totalRounds
+    const isLast = nextRound >= session.totalRounds || session.livesRemaining === 0
 
     const updatedSession: GameSession = { ...session, currentRound: nextRound }
     setSession(updatedSession)
@@ -205,7 +210,7 @@ export default function GamePage() {
   }
 
   // ── Active game (guessing + result phases) ──────────────────────────────
-  const isLastRound = session.currentRound + 1 >= session.totalRounds
+  const isLastRound = session.currentRound + 1 >= session.totalRounds || session.livesRemaining === 0
 
   return (
     <main className="min-h-screen bg-gray-50">
@@ -214,8 +219,17 @@ export default function GamePage() {
         <Link href="/" className="text-sm text-gray-500 hover:text-gray-700">
           ← Konec
         </Link>
-        <span className="text-sm font-medium text-gray-700">
+        <span className="text-sm font-medium text-gray-700 flex items-center gap-2">
           {session.playerName}
+          {session.livesRemaining !== undefined && (
+            <span className="flex gap-0.5">
+              {Array.from({ length: 3 }, (_, i) => (
+                <span key={i} className={i < session.livesRemaining! ? 'text-red-500' : 'text-gray-300'}>
+                  ♥
+                </span>
+              ))}
+            </span>
+          )}
         </span>
         <span className="text-sm font-semibold text-green-700">
           {totalScore} b

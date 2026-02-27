@@ -60,7 +60,7 @@ export default function MapPicker({
         shadowUrl: '/leaflet/marker-shadow.png',
       })
 
-      const map = L.map(containerRef.current).setView([49.183, 17.453], 14)
+      const map = L.map(containerRef.current).setView([49.171, 17.472], 14)
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '© OpenStreetMap contributors',
         maxZoom: 19,
@@ -102,7 +102,7 @@ export default function MapPicker({
         guessMarkerRef.current = null
       }
       map.getContainer().style.cursor = 'crosshair'
-      map.setView([49.183, 17.453], 14)
+      map.setView([49.171, 17.472], 14)
 
       const handleClick = (e: LeafletType.LeafletMouseEvent) => {
         const { lat, lng } = e.latlng
