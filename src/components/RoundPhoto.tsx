@@ -17,7 +17,7 @@ export default function RoundPhoto({ filename, roundNumber, totalRounds }: Round
       <img
         src={`/img/${filename}`}
         alt={`Kolo ${roundNumber} — uhádni místo`}
-        className="w-full object-contain max-h-[25vh]"
+        className="w-full object-contain max-h-[32vh]"
       />
     </div>
   )
