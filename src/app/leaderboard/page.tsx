@@ -2,6 +2,8 @@ import { getEntries } from '@/lib/leaderboard'
 import LeaderboardTable from '@/components/LeaderboardTable'
 import Link from 'next/link'
 
+export const dynamic = 'force-dynamic'
+
 export default async function LeaderboardPage() {
   const entries = await getEntries()
 
