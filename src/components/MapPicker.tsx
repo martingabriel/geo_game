@@ -170,7 +170,7 @@ export default function MapPicker({
   return (
     <div
       ref={containerRef}
-      className="h-[45vh] min-h-[260px] w-full rounded-xl overflow-hidden"
+      className="h-[37vh] min-h-[180px] w-full rounded-xl overflow-hidden"
     />
   )
 }
