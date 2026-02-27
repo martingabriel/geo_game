@@ -47,6 +47,15 @@ export default async function Home() {
           </Link>
         </div>
 
+        {/* Author */}
+        <p className="text-center text-xs text-gray-400">
+          Autor:{' '}
+          <a href="https://martingabriel.cz" target="_blank" rel="noopener noreferrer"
+             className="hover:underline">
+            martingabriel.cz
+          </a>
+        </p>
+
       </div>
     </main>
   )
