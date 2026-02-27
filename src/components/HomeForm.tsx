@@ -15,7 +15,7 @@ export default function HomeForm({ photos }: HomeFormProps) {
 
   const roundOptions: Array<{ label: string; value: 10 | 'all' }> = []
   if (photos.length >= 10) roundOptions.push({ label: '10 kol', value: 10 })
-  roundOptions.push({ label: 'Na přežití ❤️❤️❤️', value: 'all' })
+  roundOptions.push({ label: 'Na 3 životy', value: 'all' })
 
   function handleStart() {
     if (!name.trim()) return

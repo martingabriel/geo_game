@@ -41,13 +41,13 @@ describe('scoreGuess', () => {
     const result = scoreGuess(49.180, 17.457, testPhoto)
     expect(result.distanceMeters).toBeGreaterThan(testPhoto.closeRadius)
     expect(result.tier).toBe('Far')
-    expect(result.points).toBe(100)
+    expect(result.points).toBe(0)
   })
 
   it('returns Far for very large distance', () => {
     const result = scoreGuess(0, 0, testPhoto)
     expect(result.tier).toBe('Far')
-    expect(result.points).toBe(100)
+    expect(result.points).toBe(0)
     expect(result.distanceMeters).toBeGreaterThan(1000000)
   })
 

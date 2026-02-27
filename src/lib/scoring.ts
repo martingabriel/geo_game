@@ -11,7 +11,7 @@ export interface ScoreResult {
  * Score a player's guess against the actual photo location.
  * - Distance ≤ perfectRadius → Perfect, 1000 pts
  * - Distance ≤ closeRadius  → Close,   500 pts
- * - Distance > closeRadius  → Far,     100 pts
+ * - Distance > closeRadius  → Far,     0 pts
  */
 export function scoreGuess(
   guessLat: number,
@@ -31,7 +31,7 @@ export function scoreGuess(
     points = 500
   } else {
     tier = 'Far'
-    points = 100
+    points = 0
   }
 
   return { distanceMeters, tier, points }
