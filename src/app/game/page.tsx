@@ -256,35 +256,15 @@ export default function GamePage() {
           />
         </div>
 
-        {/* Result overlay */}
+        {/* Result overlay + next-round button (shown together, right after the map) */}
         {phase === 'result' && currentResult && (
-          <ResultOverlay
-            tier={currentResult.tier}
-            distanceMeters={currentResult.distanceMeters}
-            points={currentResult.points}
-            totalScore={totalScore}
-          />
-        )}
-
-        {/* Action button */}
-        <div className="pb-6">
-          {phase === 'guessing' ? (
-            <>
-              {guessLat == null && (
-                <p className="text-center text-sm text-gray-400 mb-2">
-                  Klikni na mapu a umísti svůj tip
-                </p>
-              )}
-              <button
-                onClick={handleSubmitGuess}
-                disabled={guessLat == null}
-                className="w-full rounded-xl bg-green-600 py-3 text-base font-semibold text-white
-                           hover:bg-green-700 transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
-              >
-                Potvrdit tip
-              </button>
-            </>
-          ) : (
+          <>
+            <ResultOverlay
+              tier={currentResult.tier}
+              distanceMeters={currentResult.distanceMeters}
+              points={currentResult.points}
+              totalScore={totalScore}
+            />
             <button
               onClick={handleNextRound}
               className="w-full rounded-xl bg-gray-800 py-3 text-base font-semibold text-white
@@ -292,8 +272,27 @@ export default function GamePage() {
             >
               {isLastRound ? 'Zobrazit výsledky' : 'Další kolo →'}
             </button>
-          )}
-        </div>
+          </>
+        )}
+
+        {/* Guessing: hint + confirm button */}
+        {phase === 'guessing' && (
+          <div className="pb-6">
+            {guessLat == null && (
+              <p className="text-center text-sm text-gray-400 mb-2">
+                Klikni na mapu a umísti svůj tip
+              </p>
+            )}
+            <button
+              onClick={handleSubmitGuess}
+              disabled={guessLat == null}
+              className="w-full rounded-xl bg-green-600 py-3 text-base font-semibold text-white
+                         hover:bg-green-700 transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+            >
+              Potvrdit tip
+            </button>
+          </div>
+        )}
       </div>
     </main>
   )
