@@ -256,23 +256,25 @@ export default function GamePage() {
           />
         </div>
 
-        {/* Result overlay + next-round button (shown together, right after the map) */}
+        {/* Result overlay + next-round button side by side */}
         {phase === 'result' && currentResult && (
-          <>
-            <ResultOverlay
-              tier={currentResult.tier}
-              distanceMeters={currentResult.distanceMeters}
-              points={currentResult.points}
-              totalScore={totalScore}
-            />
+          <div className="flex gap-3 items-stretch">
+            <div className="flex-1">
+              <ResultOverlay
+                tier={currentResult.tier}
+                distanceMeters={currentResult.distanceMeters}
+                points={currentResult.points}
+                totalScore={totalScore}
+              />
+            </div>
             <button
               onClick={handleNextRound}
-              className="w-full rounded-xl bg-gray-800 py-3 text-base font-semibold text-white
-                         hover:bg-gray-900 transition-colors"
+              className="w-32 shrink-0 rounded-xl bg-gray-800 text-sm font-semibold text-white
+                         hover:bg-gray-900 transition-colors leading-tight px-3"
             >
               {isLastRound ? 'Zobrazit výsledky' : 'Další kolo →'}
             </button>
-          </>
+          </div>
         )}
 
         {/* Guessing: hint + confirm button */}
