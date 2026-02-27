@@ -11,11 +11,11 @@ interface HomeFormProps {
 export default function HomeForm({ photos }: HomeFormProps) {
   const router = useRouter()
   const [name, setName] = useState('')
-  const [roundChoice, setRoundChoice] = useState<5 | 'all'>(5)
+  const [roundChoice, setRoundChoice] = useState<10 | 'all'>(10)
 
-  const roundOptions: Array<{ label: string; value: 5 | 'all' }> = []
-  if (photos.length >= 5) roundOptions.push({ label: '5 kol', value: 5 })
-  roundOptions.push({ label: `Vše (${photos.length} fotek) ❤️❤️❤️`, value: 'all' })
+  const roundOptions: Array<{ label: string; value: 10 | 'all' }> = []
+  if (photos.length >= 10) roundOptions.push({ label: '10 kol', value: 10 })
+  roundOptions.push({ label: 'Na přežití ❤️❤️❤️', value: 'all' })
 
   function handleStart() {
     if (!name.trim()) return
@@ -60,7 +60,7 @@ export default function HomeForm({ photos }: HomeFormProps) {
 
       {/* Round selector */}
       <div>
-        <p className="block text-sm font-medium text-gray-700 mb-2">Počet kol</p>
+        <p className="block text-sm font-medium text-gray-700 mb-2">Herní mód</p>
         <div className="flex gap-2 flex-wrap">
           {roundOptions.map((opt) => (
             <button
