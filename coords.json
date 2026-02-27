@@ -54,5 +54,61 @@
       "latitude": 49.184229389926514,
       "longitude": 17.452615957751018
     }
+  },
+  {
+    "filename": "photo_9.png",
+    "gps": {
+      "latitude": 49.171892237326325,
+      "longitude": 17.471486518071814
+    }
+  },
+  {
+    "filename": "photo_10.png",
+    "gps": {
+      "latitude": 49.164989425150594,
+      "longitude": 17.472160101844075
+    }
+  },
+  {
+    "filename": "photo_11.png",
+    "gps": {
+      "latitude": 49.16222261426002,
+      "longitude": 17.450543823735252
+    }
+  },
+  {
+    "filename": "photo_12.png",
+    "gps": {
+      "latitude": 49.16776410807449,
+      "longitude": 17.492998764069114
+    }
+  },
+  {
+    "filename": "photo_13.png",
+    "gps": {
+      "latitude": 49.178640521825756,
+      "longitude": 17.471802435840377
+    }
+  },
+  {
+    "filename": "photo_14.png",
+    "gps": {
+      "latitude": 49.187693798225965,
+      "longitude": 17.47143259682517
+    }
+  },
+  {
+    "filename": "photo_15.png",
+    "gps": {
+      "latitude": 49.162100819821234,
+      "longitude": 17.45065450810778
+    }
+  },
+  {
+    "filename": "photo_16.png",
+    "gps": {
+      "latitude": 49.173870930791786,
+      "longitude": 17.463681628029338
+    }
   }
 ]
