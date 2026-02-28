@@ -1,5 +1,6 @@
 import { getPhotos } from '@/lib/photos'
 import HomeForm from '@/components/HomeForm'
+import HowToPlay from '@/components/HowToPlay'
 import Link from 'next/link'
 
 export default async function Home() {
@@ -38,6 +39,8 @@ export default async function Home() {
         <div className="bg-white rounded-2xl shadow-sm border border-gray-100 px-6 py-7">
           <HomeForm photos={photos} />
         </div>
+
+        <HowToPlay />
 
         {/* Footer row */}
         <div className="flex items-center justify-between text-xs text-gray-400 px-1">
