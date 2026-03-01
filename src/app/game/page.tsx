@@ -9,6 +9,7 @@ import { scoreGuess } from '@/lib/scoring'
 import RoundPhoto from '@/components/RoundPhoto'
 import ResultOverlay from '@/components/ResultOverlay'
 import ScoreBreakdown from '@/components/ScoreBreakdown'
+import ShareButton from '@/components/ShareButton'
 
 // Leaflet must never be server-rendered
 const MapPicker = dynamic(() => import('@/components/MapPicker'), { ssr: false })
@@ -152,6 +153,16 @@ export default function GamePage() {
       <main className="min-h-screen bg-gray-50 px-4 py-10">
         <div className="max-w-xl mx-auto space-y-6">
           <ScoreBreakdown results={session.results} playerName={session.playerName} />
+
+          <ShareButton
+            playerName={session.playerName}
+            score={session.results.reduce((s, r) => s + r.points, 0)}
+            maxScore={session.results.length * 1000}
+            rounds={session.results.length}
+            perfect={session.results.filter(r => r.tier === 'Perfect').length}
+            close={session.results.filter(r => r.tier === 'Close').length}
+            far={session.results.filter(r => r.tier === 'Far').length}
+          />
 
           {/* Save to leaderboard */}
           <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-4 space-y-3">
