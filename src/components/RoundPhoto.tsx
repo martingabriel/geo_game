@@ -23,8 +23,9 @@ export default function RoundPhoto({ filename, roundNumber, totalRounds }: Round
       >
         {/* Loading spinner shown while photo is fetching */}
         {isLoading && (
-          <div className="w-full h-[32vh] bg-gray-100 rounded-xl flex items-center justify-center">
+          <div className="w-full h-[32vh] bg-gray-100 rounded-xl flex flex-col items-center justify-center gap-3">
             <div className="w-10 h-10 border-4 border-gray-300 border-t-green-500 rounded-full animate-spin" />
+            <span className="text-sm text-gray-400">načítání…</span>
           </div>
         )}
 
