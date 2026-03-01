@@ -21,9 +21,11 @@ export default function RoundPhoto({ filename, roundNumber, totalRounds }: Round
         className="relative w-full rounded-xl overflow-hidden cursor-zoom-in"
         onClick={() => !isLoading && setZoomed(true)}
       >
-        {/* Skeleton shown while photo is loading */}
+        {/* Loading spinner shown while photo is fetching */}
         {isLoading && (
-          <div className="w-full h-[32vh] bg-gray-200 animate-pulse rounded-xl" />
+          <div className="w-full h-[32vh] bg-gray-100 rounded-xl flex items-center justify-center">
+            <div className="w-10 h-10 border-4 border-gray-300 border-t-green-500 rounded-full animate-spin" />
+          </div>
         )}
 
         {/* Blurred background — hidden while loading to avoid showing stale photo */}
