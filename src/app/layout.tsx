@@ -3,6 +3,7 @@ import './globals.css'
 import 'leaflet/dist/leaflet.css'
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://poznej-halenkovice.online'),
   title: 'Poznej Halenkovice',
   description: 'Poznáš, kde byly pořízeny tyto fotky z Halenkovic?',
 }
