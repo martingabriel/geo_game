@@ -90,12 +90,17 @@ export async function generateShareCard(data: ShareCardData): Promise<Blob> {
   ctx.font = '42px system-ui, sans-serif'
   ctx.fillText(`z ${data.maxScore.toLocaleString('cs-CZ')} bodů`, W / 2, scoreY + 70)
 
+  const guessed = data.results.filter(r => r.tier !== 'Far').length
+  ctx.fillStyle = '#374151'
+  ctx.font = '44px system-ui, sans-serif'
+  ctx.fillText(`Poznal jsem ${guessed} z ${data.results.length} fotek!`, W / 2, scoreY + 150)
+
   ctx.fillStyle = '#374151'
   ctx.font = '46px system-ui, sans-serif'
-  ctx.fillText(data.playerName, W / 2, scoreY + 200)
+  ctx.fillText(data.playerName, W / 2, scoreY + 240)
 
   // ── Divider ───────────────────────────────────────────────────
-  const dividerY = scoreY + 310
+  const dividerY = scoreY + 350
   ctx.strokeStyle = '#e5e7eb'
   ctx.lineWidth = 2
   ctx.beginPath()
