@@ -65,7 +65,7 @@
   },
   {
     "id": "photo_9",
-    "filename": "photo_9.png",
+    "filename": "photo_9.jpg",
     "lat": 49.171892237326325,
     "lng": 17.471486518071814,
     "perfectRadius": 50,
@@ -73,17 +73,9 @@
   },
   {
     "id": "photo_10",
-    "filename": "photo_10.png",
+    "filename": "photo_10.jpg",
     "lat": 49.164989425150594,
     "lng": 17.472160101844075,
-    "perfectRadius": 50,
-    "closeRadius": 200
-  },
-  {
-    "id": "photo_11",
-    "filename": "photo_11.png",
-    "lat": 49.16222261426002,
-    "lng": 17.450543823735252,
     "perfectRadius": 50,
     "closeRadius": 200
   },
@@ -97,7 +89,7 @@
   },
   {
     "id": "photo_13",
-    "filename": "photo_13.png",
+    "filename": "photo_13.jpg",
     "lat": 49.178640521825756,
     "lng": 17.471802435840377,
     "perfectRadius": 50,
@@ -105,7 +97,7 @@
   },
   {
     "id": "photo_14",
-    "filename": "photo_14.png",
+    "filename": "photo_14.jpg",
     "lat": 49.187693798225965,
     "lng": 17.47143259682517,
     "perfectRadius": 50,
@@ -113,17 +105,73 @@
   },
   {
     "id": "photo_15",
-    "filename": "photo_15.png",
+    "filename": "photo_15.jpg",
     "lat": 49.162100819821234,
     "lng": 17.45065450810778,
     "perfectRadius": 50,
     "closeRadius": 200
   },
   {
-    "id": "photo_16",
-    "filename": "photo_16.png",
-    "lat": 49.173870930791786,
-    "lng": 17.463681628029338,
+    "id": "photo_17",
+    "filename": "photo_17.jpg",
+    "lat": 49.17104126841936,
+    "lng": 17.471331109915162,
+    "perfectRadius": 50,
+    "closeRadius": 200
+  },
+  {
+    "id": "photo_18",
+    "filename": "photo_18.jpg",
+    "lat": 49.19000616004068,
+    "lng": 17.408658121222675,
+    "perfectRadius": 50,
+    "closeRadius": 200
+  },
+  {
+    "id": "photo_19",
+    "filename": "photo_19.jpg",
+    "lat": 49.18265721790759,
+    "lng": 17.415109983155645,
+    "perfectRadius": 50,
+    "closeRadius": 200
+  },
+  {
+    "id": "photo_20",
+    "filename": "photo_20.jpg",
+    "lat": 49.18352813887841,
+    "lng": 17.417119072743933,
+    "perfectRadius": 50,
+    "closeRadius": 200
+  },
+  {
+    "id": "photo_21",
+    "filename": "photo_21.png",
+    "lat": 49.19255972761514,
+    "lng": 17.450594585259925,
+    "perfectRadius": 50,
+    "closeRadius": 200
+  },
+  {
+    "id": "photo_22",
+    "filename": "photo_22.png",
+    "lat": 49.1770700658407,
+    "lng": 17.457107081784994,
+    "perfectRadius": 50,
+    "closeRadius": 200
+  },
+  {
+    "id": "photo_23",
+    "filename": "photo_23.png",
+    "lat": 49.170582398710245,
+    "lng": 17.47194704031693,
+    "perfectRadius": 50,
+    "closeRadius": 200
+  },
+  {
+    "id": "photo_24",
+    "filename": "photo_24.png",
+    "lat": 49.17205377098141,
+    "lng": 17.4714952209026,
     "perfectRadius": 50,
     "closeRadius": 200
   }
