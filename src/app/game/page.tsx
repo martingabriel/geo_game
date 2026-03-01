@@ -159,9 +159,7 @@ export default function GamePage() {
             score={session.results.reduce((s, r) => s + r.points, 0)}
             maxScore={session.results.length * 1000}
             rounds={session.results.length}
-            perfect={session.results.filter(r => r.tier === 'Perfect').length}
-            close={session.results.filter(r => r.tier === 'Close').length}
-            far={session.results.filter(r => r.tier === 'Far').length}
+            results={session.results.map(r => ({ filename: r.filename, tier: r.tier }))}
           />
 
           {/* Save to leaderboard */}
