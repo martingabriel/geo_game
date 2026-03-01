@@ -1,6 +1,7 @@
 import { getPhotos } from '@/lib/photos'
 import HomeForm from '@/components/HomeForm'
 import HowToPlay from '@/components/HowToPlay'
+import AboutApp from '@/components/AboutApp'
 import Link from 'next/link'
 
 export default async function Home() {
@@ -41,6 +42,7 @@ export default async function Home() {
         </div>
 
         <HowToPlay />
+        <AboutApp />
 
         {/* Footer row */}
         <div className="flex items-center justify-between text-xs text-gray-400 px-1">
