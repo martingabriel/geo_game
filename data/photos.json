@@ -174,5 +174,13 @@
     "lng": 17.4714952209026,
     "perfectRadius": 50,
     "closeRadius": 200
+  },
+  {
+    "id": "photo_25",
+    "filename": "photo_25.jpg",
+    "lat": 49.17327875584476,
+    "lng": 17.471841802004437,
+    "perfectRadius": 50,
+    "closeRadius": 200
   }
 ]
