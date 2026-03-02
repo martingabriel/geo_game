@@ -30,6 +30,7 @@ export default function HomeForm({ photos }: HomeFormProps) {
       photoIds: selected.map((p) => p.id),
       currentRound: 0,
       results: [],
+      sessionId: crypto.randomUUID(),
       ...(roundChoice === 'all' ? { livesRemaining: 3 } : {}),
     }
 

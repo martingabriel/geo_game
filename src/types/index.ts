@@ -26,6 +26,7 @@ export interface GameSession {
   currentRound: number
   results: RoundResult[]
   livesRemaining?: number
+  sessionId: string
 }
 
 export interface LeaderboardEntry {

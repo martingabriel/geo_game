@@ -85,6 +85,27 @@ export default function GamePage() {
       updatedSession = { ...updatedSession, livesRemaining: Math.max(0, updatedSession.livesRemaining - 1) }
     }
 
+    // Fire-and-forget: record this guess for analytics
+    fetch('/api/guesses', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        sessionId:   session.sessionId,
+        playerName:  session.playerName,
+        gameMode:    session.livesRemaining !== undefined ? 'all_photos' : '10_rounds',
+        roundNumber: session.currentRound + 1,
+        photoId:     currentPhoto.id,
+        filename:    currentPhoto.filename,
+        latActual:   currentPhoto.lat,
+        lngActual:   currentPhoto.lng,
+        latGuess:    guessLat,
+        lngGuess:    guessLng,
+        distanceM:   result.distanceMeters,
+        tier:        result.tier,
+        points:      result.points,
+      }),
+    }).catch(() => { /* analytics failure is non-critical */ })
+
     setCurrentResult(result)
     setSession(updatedSession)
     sessionStorage.setItem('gameSession', JSON.stringify(updatedSession))
