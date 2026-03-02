@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import 'leaflet/dist/leaflet.css'
+import { Analytics } from '@vercel/analytics/next'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://poznej-halenkovice.online'),
@@ -17,6 +18,7 @@ export default function RootLayout({
     <html lang="cs">
       <body className="min-h-screen bg-gray-50 text-gray-900 antialiased">
         {children}
+        <Analytics />
       </body>
     </html>
   )
