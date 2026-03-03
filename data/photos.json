@@ -182,5 +182,29 @@
     "lng": 17.471841802004437,
     "perfectRadius": 50,
     "closeRadius": 200
+  },
+  {
+    "id": "photo_26",
+    "filename": "photo_26.jpg",
+    "lat": 49.18518336631649,
+    "lng": 17.446113928084365,
+    "perfectRadius": 50,
+    "closeRadius": 200
+  },
+  {
+    "id": "photo_27",
+    "filename": "photo_27.jpg",
+    "lat": 49.192693273985995,
+    "lng": 17.435950182907614,
+    "perfectRadius": 50,
+    "closeRadius": 200
+  },
+  {
+    "id": "photo_28",
+    "filename": "photo_28.jpg",
+    "lat": 49.17723769153295,
+    "lng": 17.457200597292722,
+    "perfectRadius": 50,
+    "closeRadius": 200
   }
 ]
