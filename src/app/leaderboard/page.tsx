@@ -8,19 +8,19 @@ export default async function LeaderboardPage() {
   const entries = await getEntries()
 
   return (
-    <main className="min-h-screen bg-gray-50 px-4 py-10">
+    <main className="min-h-screen bg-gray-50 dark:bg-gray-900 px-4 py-10">
       <div className="max-w-xl mx-auto space-y-6">
         {/* Header */}
         <div className="flex items-center justify-between">
           <div>
-            <h1 className="text-2xl font-bold text-gray-900">🏆 Žebříček</h1>
-            <p className="text-sm text-gray-500 mt-0.5">
+            <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-50">🏆 Žebříček</h1>
+            <p className="text-sm text-gray-500 dark:text-gray-400 mt-0.5">
               {entries.length} {entries.length === 1 ? 'hráč' : 'hráčů'} v žebříčku
             </p>
           </div>
           <Link
             href="/"
-            className="text-sm text-green-600 font-medium hover:underline"
+            className="text-sm text-green-600 dark:text-green-400 font-medium hover:underline"
           >
             ← Hrát znovu
           </Link>

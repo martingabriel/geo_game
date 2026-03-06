@@ -22,7 +22,7 @@ export default function ResultOverlay({ tier, distanceMeters, points, totalScore
   const { bg, label, emoji } = TIER_STYLES[tier]
 
   return (
-    <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-3 space-y-2">
+    <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-100 dark:border-gray-700 shadow-sm p-3 space-y-2">
       {/* Tier badge */}
       <span className={`${bg} inline-block text-sm font-bold px-3 py-1 rounded-full`}>
         {emoji} {label}
@@ -31,16 +31,16 @@ export default function ResultOverlay({ tier, distanceMeters, points, totalScore
       {/* Stats row */}
       <div className="flex items-center gap-5 text-xs">
         <div>
-          <span className="text-gray-500">Vzdálenost</span>
-          <p className="font-semibold text-gray-900 text-sm">{formatDistance(distanceMeters)}</p>
+          <span className="text-gray-500 dark:text-gray-400">Vzdálenost</span>
+          <p className="font-semibold text-gray-900 dark:text-gray-50 text-sm">{formatDistance(distanceMeters)}</p>
         </div>
         <div>
-          <span className="text-gray-500">Toto kolo</span>
-          <p className="font-semibold text-gray-900 text-sm">+{points} b</p>
+          <span className="text-gray-500 dark:text-gray-400">Toto kolo</span>
+          <p className="font-semibold text-gray-900 dark:text-gray-50 text-sm">+{points} b</p>
         </div>
         <div>
-          <span className="text-gray-500">Celkem</span>
-          <p className="font-semibold text-gray-900 text-sm">{totalScore} b</p>
+          <span className="text-gray-500 dark:text-gray-400">Celkem</span>
+          <p className="font-semibold text-gray-900 dark:text-gray-50 text-sm">{totalScore} b</p>
         </div>
       </div>
     </div>

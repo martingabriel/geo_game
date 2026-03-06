@@ -2,42 +2,46 @@ import { getPhotos } from '@/lib/photos'
 import HomeForm from '@/components/HomeForm'
 import HowToPlay from '@/components/HowToPlay'
 import AboutApp from '@/components/AboutApp'
+import DarkModeToggle from '@/components/DarkModeToggle'
 import Link from 'next/link'
 
 export default async function Home() {
   const photos = await getPhotos()
 
   return (
-    <main className="min-h-screen bg-gray-50 flex flex-col items-center justify-center px-4 py-12">
+    <main className="min-h-screen bg-gray-50 dark:bg-gray-900 flex flex-col items-center justify-center px-4 py-12">
       <div className="w-full max-w-md space-y-8">
 
         {/* Hero */}
         <div className="text-center space-y-4">
-          <div className="flex justify-center">
+          <div className="flex justify-center relative">
             <img
               src="/halenkovice_znak.png"
               alt="Znak obce Halenkovice"
               className="h-28 w-auto drop-shadow-lg"
             />
+            <div className="absolute right-0 top-0">
+              <DarkModeToggle />
+            </div>
           </div>
           <div>
-            <h1 className="text-3xl font-bold tracking-tight text-gray-900">
+            <h1 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-50">
               Poznej Halenkovice
             </h1>
-            <p className="mt-1 text-gray-500 text-sm">
+            <p className="mt-1 text-gray-500 dark:text-gray-400 text-sm">
               Poznáš, kde byly pořízeny tyto fotky? Uhádni místo na mapě!
             </p>
           </div>
         </div>
 
         {/* Promo quote */}
-        <blockquote className="text-sm text-gray-500 italic border-l-4 border-blue-300 pl-4">
+        <blockquote className="text-sm text-gray-500 dark:text-gray-400 italic border-l-4 border-blue-300 dark:border-blue-600 pl-4">
           Kdo chce poznat Vídeň, mosí chodit týdeň…<br />
           Kdo chce poznat Halenkovice, mosí chodit 3 měsíce.
         </blockquote>
 
         {/* Form card */}
-        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 px-6 py-7">
+        <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 px-6 py-7">
           <HomeForm photos={photos} />
         </div>
 
@@ -45,7 +49,7 @@ export default async function Home() {
         <AboutApp />
 
         {/* Footer row */}
-        <div className="flex items-center justify-between text-xs text-gray-400 px-1">
+        <div className="flex items-center justify-between text-xs text-gray-400 dark:text-gray-500 px-1">
           <span>{photos.length} fotek v databázi</span>
           <Link href="/leaderboard" className="text-green-600 hover:underline font-medium text-sm">
             Žebříček →
@@ -53,7 +57,7 @@ export default async function Home() {
         </div>
 
         {/* Author */}
-        <p className="text-center text-xs text-gray-400">
+        <p className="text-center text-xs text-gray-400 dark:text-gray-500">
           Autor:{' '}
           <a href="https://martingabriel.cz" target="_blank" rel="noopener noreferrer"
              className="hover:underline">

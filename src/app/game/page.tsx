@@ -162,8 +162,8 @@ export default function GamePage() {
   // ── Loading state ───────────────────────────────────────────────────────
   if (phase === 'loading' || !session || (phase !== 'finished' && !currentPhoto)) {
     return (
-      <main className="flex min-h-screen items-center justify-center">
-        <p className="text-gray-500 animate-pulse">Načítám hru…</p>
+      <main className="flex min-h-screen items-center justify-center bg-gray-50 dark:bg-gray-900">
+        <p className="text-gray-500 dark:text-gray-400 animate-pulse">Načítám hru…</p>
       </main>
     )
   }
@@ -171,7 +171,7 @@ export default function GamePage() {
   // ── Finished phase ──────────────────────────────────────────────────────
   if (phase === 'finished') {
     return (
-      <main className="min-h-screen bg-gray-50 px-4 py-10">
+      <main className="min-h-screen bg-gray-50 dark:bg-gray-900 px-4 py-10">
         <div className="max-w-xl mx-auto space-y-6">
           <ScoreBreakdown results={session.results} playerName={session.playerName} />
 
@@ -184,9 +184,9 @@ export default function GamePage() {
           />
 
           {/* Save to leaderboard */}
-          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-4 space-y-3">
-            <h2 className="font-semibold text-gray-900">Uložit skóre</h2>
-            <p className="text-sm text-gray-600">
+          <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-100 dark:border-gray-700 shadow-sm p-4 space-y-3">
+            <h2 className="font-semibold text-gray-900 dark:text-gray-50">Uložit skóre</h2>
+            <p className="text-sm text-gray-600 dark:text-gray-400">
               Hraješ jako <span className="font-medium">{session.playerName}</span>
             </p>
 
@@ -221,15 +221,15 @@ export default function GamePage() {
           <div className="flex gap-3">
             <Link
               href="/"
-              className="flex-1 text-center rounded-lg border border-gray-300 px-4 py-2.5 text-sm
-                         font-medium text-gray-700 hover:bg-gray-50 transition-colors"
+              className="flex-1 text-center rounded-lg border border-gray-300 dark:border-gray-600 px-4 py-2.5 text-sm
+                         font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
             >
               Hrát znovu
             </Link>
             <Link
               href="/leaderboard"
-              className="flex-1 text-center rounded-lg border border-gray-300 px-4 py-2.5 text-sm
-                         font-medium text-gray-700 hover:bg-gray-50 transition-colors"
+              className="flex-1 text-center rounded-lg border border-gray-300 dark:border-gray-600 px-4 py-2.5 text-sm
+                         font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
             >
               Žebříček
             </Link>
@@ -243,25 +243,25 @@ export default function GamePage() {
   const isLastRound = session.currentRound + 1 >= session.totalRounds || session.livesRemaining === 0
 
   return (
-    <main className="min-h-screen bg-gray-50">
+    <main className="min-h-screen bg-gray-50 dark:bg-gray-900">
       {/* Top bar */}
-      <header className="bg-white border-b border-gray-100 px-4 py-3 flex items-center justify-between">
-        <Link href="/" className="text-sm text-gray-500 hover:text-gray-700">
+      <header className="bg-white dark:bg-gray-800 border-b border-gray-100 dark:border-gray-700 px-4 py-3 flex items-center justify-between">
+        <Link href="/" className="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200">
           ← Konec
         </Link>
-        <span className="text-sm font-medium text-gray-700 flex items-center gap-2">
+        <span className="text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center gap-2">
           {session.playerName}
           {session.livesRemaining !== undefined && (
             <span className="flex gap-0.5">
               {Array.from({ length: 3 }, (_, i) => (
-                <span key={i} className={i < session.livesRemaining! ? 'text-red-500' : 'text-gray-300'}>
+                <span key={i} className={i < session.livesRemaining! ? 'text-red-500' : 'text-gray-300 dark:text-gray-600'}>
                   ♥
                 </span>
               ))}
             </span>
           )}
         </span>
-        <span className="text-sm font-semibold text-green-700">
+        <span className="text-sm font-semibold text-green-700 dark:text-green-400">
           {totalScore} b
         </span>
       </header>
@@ -275,7 +275,7 @@ export default function GamePage() {
         />
 
         {/* Map */}
-        <div className="rounded-xl border border-gray-200">
+        <div className="rounded-xl border border-gray-200 dark:border-gray-700">
           <MapPicker
             phase={phase === 'result' ? 'result' : 'guessing'}
             onPin={handlePin}
@@ -299,8 +299,8 @@ export default function GamePage() {
             </div>
             <button
               onClick={handleNextRound}
-              className="w-32 shrink-0 rounded-xl bg-gray-800 text-sm font-semibold text-white
-                         hover:bg-gray-900 transition-colors leading-tight px-3"
+              className="w-32 shrink-0 rounded-xl bg-gray-800 dark:bg-gray-600 text-sm font-semibold text-white
+                         hover:bg-gray-900 dark:hover:bg-gray-500 transition-colors leading-tight px-3"
             >
               {isLastRound ? 'Zobrazit výsledky' : 'Další kolo →'}
             </button>
@@ -311,7 +311,7 @@ export default function GamePage() {
         {phase === 'guessing' && (
           <div className="pb-6">
             {guessLat == null && (
-              <p className="text-center text-sm text-gray-400 mb-2">
+              <p className="text-center text-sm text-gray-400 dark:text-gray-500 mb-2">
                 Klikni na mapu a umísti svůj tip
               </p>
             )}
