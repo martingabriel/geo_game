@@ -176,14 +176,6 @@ export default function GamePage() {
         <div className="max-w-xl mx-auto space-y-6">
           <ScoreBreakdown results={session.results} playerName={session.playerName} />
 
-          <ShareButton
-            playerName={playerName}
-            score={session.results.reduce((s, r) => s + r.points, 0)}
-            maxScore={session.results.length * 1000}
-            rounds={session.results.length}
-            results={session.results.map(r => ({ filename: r.filename, tier: r.tier }))}
-          />
-
           {/* Save to leaderboard */}
           <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-100 dark:border-gray-700 shadow-sm p-4 space-y-3">
             <h2 className="font-semibold text-gray-900 dark:text-gray-50">Uložit skóre</h2>
@@ -227,6 +219,14 @@ export default function GamePage() {
               </div>
             )}
           </div>
+
+          <ShareButton
+            playerName={playerName}
+            score={session.results.reduce((s, r) => s + r.points, 0)}
+            maxScore={session.results.length * 1000}
+            rounds={session.results.length}
+            results={session.results.map(r => ({ filename: r.filename, tier: r.tier }))}
+          />
 
           <div className="flex gap-3">
             <Link
