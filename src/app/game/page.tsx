@@ -26,6 +26,7 @@ export default function GamePage() {
   const [guessLng, setGuessLng] = useState<number | null>(null)
   const [currentResult, setCurrentResult] = useState<RoundResult | null>(null)
   const [savedStatus, setSavedStatus] = useState<'idle' | 'saving' | 'saved' | 'error'>('idle')
+  const [saveError, setSaveError] = useState<string | null>(null)
   const [playerName, setPlayerName] = useState('')
 
   // ── Load session from sessionStorage on mount ──────────────────────────
@@ -146,16 +147,23 @@ export default function GamePage() {
         body: JSON.stringify({
           name: playerName.trim(),
           score: totalScore,
-          rounds: session.totalRounds,
+          rounds: session.results.length,
         }),
       })
 
-      if (!res.ok) throw new Error('Failed to save')
+      if (!res.ok) {
+        const body = await res.json().catch(() => ({})) as { error?: string }
+        setSaveError(body.error ?? `Chyba ${res.status}`)
+        setSavedStatus('error')
+        return
+      }
       setSavedStatus('saved')
+      setSaveError(null)
       // Clear session so the game can't be replayed
       sessionStorage.removeItem('gameSession')
       sessionStorage.removeItem('gamePhotos')
-    } catch {
+    } catch (err) {
+      setSaveError(err instanceof Error ? err.message : 'Síťová chyba')
       setSavedStatus('error')
     }
   }
@@ -214,7 +222,7 @@ export default function GamePage() {
                   {savedStatus === 'saving' ? 'Ukládám…' : 'Uložit do žebříčku'}
                 </button>
                 {savedStatus === 'error' && (
-                  <p className="text-red-500 text-xs">Uložení se nezdařilo. Zkus to znovu.</p>
+                  <p className="text-red-500 text-xs">Uložení se nezdařilo: {saveError ?? 'Zkus to znovu.'}</p>
                 )}
               </div>
             )}
