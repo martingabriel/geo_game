@@ -26,6 +26,7 @@ export default function GamePage() {
   const [guessLng, setGuessLng] = useState<number | null>(null)
   const [currentResult, setCurrentResult] = useState<RoundResult | null>(null)
   const [savedStatus, setSavedStatus] = useState<'idle' | 'saving' | 'saved' | 'error'>('idle')
+  const [playerName, setPlayerName] = useState('')
 
   // ── Load session from sessionStorage on mount ──────────────────────────
   useEffect(() => {
@@ -143,7 +144,7 @@ export default function GamePage() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          name: session.playerName,
+          name: playerName.trim(),
           score: totalScore,
           rounds: session.totalRounds,
         }),
@@ -176,7 +177,7 @@ export default function GamePage() {
           <ScoreBreakdown results={session.results} playerName={session.playerName} />
 
           <ShareButton
-            playerName={session.playerName}
+            playerName={playerName}
             score={session.results.reduce((s, r) => s + r.points, 0)}
             maxScore={session.results.length * 1000}
             rounds={session.results.length}
@@ -186,9 +187,18 @@ export default function GamePage() {
           {/* Save to leaderboard */}
           <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-100 dark:border-gray-700 shadow-sm p-4 space-y-3">
             <h2 className="font-semibold text-gray-900 dark:text-gray-50">Uložit skóre</h2>
-            <p className="text-sm text-gray-600 dark:text-gray-400">
-              Hraješ jako <span className="font-medium">{session.playerName}</span>
-            </p>
+            <input
+              type="text"
+              value={playerName}
+              onChange={e => setPlayerName(e.target.value)}
+              placeholder="Zadej svoje jméno…"
+              disabled={savedStatus === 'saved'}
+              className="w-full rounded-lg border border-gray-300 dark:border-gray-600 px-4 py-2.5 text-base
+                         bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-50
+                         placeholder:text-gray-400 dark:placeholder:text-gray-500
+                         focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent
+                         disabled:opacity-50"
+            />
 
             {savedStatus === 'saved' ? (
               <div className="space-y-2">
@@ -205,7 +215,7 @@ export default function GamePage() {
               <div className="flex flex-col gap-2">
                 <button
                   onClick={handleSaveScore}
-                  disabled={savedStatus === 'saving'}
+                  disabled={!playerName.trim() || savedStatus === 'saving'}
                   className="rounded-lg bg-green-600 px-5 py-2.5 text-sm font-semibold text-white
                              hover:bg-green-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                 >
@@ -250,7 +260,6 @@ export default function GamePage() {
           ← Konec
         </Link>
         <span className="text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center gap-2">
-          {session.playerName}
           {session.livesRemaining !== undefined && (
             <span className="flex gap-0.5">
               {Array.from({ length: 3 }, (_, i) => (

@@ -39,7 +39,7 @@ export default function ShareButton(props: Props) {
   return (
     <button
       onClick={handleShare}
-      disabled={state === 'generating'}
+      disabled={!props.playerName || state === 'generating'}
       className="w-full flex items-center justify-center gap-2 rounded-xl border-2 border-green-600
                  bg-white text-green-700 font-semibold py-3 text-sm
                  hover:bg-green-50 active:bg-green-100 disabled:opacity-50 transition-colors"
