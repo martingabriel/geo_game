@@ -48,7 +48,7 @@ export default function RoundPhoto({ filename, roundNumber, totalRounds, source 
         {/* Source badge */}
         <div className="absolute top-3 right-3 z-10 bg-black/60 text-white text-xs font-semibold
                         px-2.5 py-1 rounded-full backdrop-blur-sm">
-          {source}
+          Zdroj: {source}
         </div>
 
         {/* Sharp photo — always in DOM so browser fetches it; hidden until loaded */}
