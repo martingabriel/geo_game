@@ -6,9 +6,10 @@ interface RoundPhotoProps {
   filename: string
   roundNumber: number
   totalRounds: number
+  source: string
 }
 
-export default function RoundPhoto({ filename, roundNumber, totalRounds }: RoundPhotoProps) {
+export default function RoundPhoto({ filename, roundNumber, totalRounds, source }: RoundPhotoProps) {
   const [zoomed, setZoomed] = useState(false)
   const [loadedFilename, setLoadedFilename] = useState<string | null>(null)
 
@@ -42,6 +43,12 @@ export default function RoundPhoto({ filename, roundNumber, totalRounds }: Round
         <div className="absolute top-3 left-3 z-10 bg-black/60 text-white text-xs font-semibold
                         px-2.5 py-1 rounded-full backdrop-blur-sm">
           Kolo {roundNumber} z {totalRounds}
+        </div>
+
+        {/* Source badge */}
+        <div className="absolute top-3 right-3 z-10 bg-black/60 text-white text-xs font-semibold
+                        px-2.5 py-1 rounded-full backdrop-blur-sm">
+          {source}
         </div>
 
         {/* Sharp photo — always in DOM so browser fetches it; hidden until loaded */}

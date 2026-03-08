@@ -272,6 +272,7 @@ export default function GamePage() {
           filename={currentPhoto.filename}
           roundNumber={session.currentRound + 1}
           totalRounds={session.totalRounds}
+          source={currentPhoto.source}
         />
 
         {/* Map */}
