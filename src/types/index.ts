@@ -5,6 +5,7 @@ export interface Photo {
   lng: number
   perfectRadius: number
   closeRadius: number
+  source: string
 }
 
 export type ScoreTier = 'Perfect' | 'Close' | 'Far'

@@ -5,7 +5,8 @@
     "lat": 49.18920262760578,
     "lng": 17.470265537704485,
     "perfectRadius": 50,
-    "closeRadius": 200
+    "closeRadius": 200,
+    "source": "Martin Gabriel"
   },
   {
     "id": "photo_2",
@@ -13,7 +14,8 @@
     "lat": 49.17660525044344,
     "lng": 17.45602563456359,
     "perfectRadius": 50,
-    "closeRadius": 200
+    "closeRadius": 200,
+    "source": "Martin Gabriel"
   },
   {
     "id": "photo_3",
@@ -21,7 +23,8 @@
     "lat": 49.192723726046815,
     "lng": 17.45117120861344,
     "perfectRadius": 50,
-    "closeRadius": 200
+    "closeRadius": 200,
+    "source": "Martin Gabriel"
   },
   {
     "id": "photo_4",
@@ -29,7 +32,8 @@
     "lat": 49.17694333284542,
     "lng": 17.453532571077552,
     "perfectRadius": 50,
-    "closeRadius": 200
+    "closeRadius": 200,
+    "source": "Martin Gabriel"
   },
   {
     "id": "photo_5",
@@ -37,7 +41,8 @@
     "lat": 49.18020621576984,
     "lng": 17.45140215410372,
     "perfectRadius": 50,
-    "closeRadius": 200
+    "closeRadius": 200,
+    "source": "Martin Gabriel"
   },
   {
     "id": "photo_6",
@@ -45,7 +50,8 @@
     "lat": 49.187893915008,
     "lng": 17.47157222909346,
     "perfectRadius": 50,
-    "closeRadius": 200
+    "closeRadius": 200,
+    "source": "Martin Gabriel"
   },
   {
     "id": "photo_7",
@@ -53,7 +59,8 @@
     "lat": 49.18288947765826,
     "lng": 17.427072973068196,
     "perfectRadius": 50,
-    "closeRadius": 200
+    "closeRadius": 200,
+    "source": "Martin Gabriel"
   },
   {
     "id": "photo_8",
@@ -61,7 +68,8 @@
     "lat": 49.184229389926514,
     "lng": 17.452615957751018,
     "perfectRadius": 50,
-    "closeRadius": 200
+    "closeRadius": 200,
+    "source": "Martin Gabriel"
   },
   {
     "id": "photo_9",
@@ -69,7 +77,8 @@
     "lat": 49.171892237326325,
     "lng": 17.471486518071814,
     "perfectRadius": 50,
-    "closeRadius": 200
+    "closeRadius": 200,
+    "source": "Web (Public Domain)"
   },
   {
     "id": "photo_10",
@@ -77,7 +86,8 @@
     "lat": 49.164989425150594,
     "lng": 17.472160101844075,
     "perfectRadius": 50,
-    "closeRadius": 200
+    "closeRadius": 200,
+    "source": "Web (Public Domain)"
   },
   {
     "id": "photo_12",
@@ -85,7 +95,8 @@
     "lat": 49.16776410807449,
     "lng": 17.492998764069114,
     "perfectRadius": 50,
-    "closeRadius": 200
+    "closeRadius": 200,
+    "source": "Web (Public Domain)"
   },
   {
     "id": "photo_13",
@@ -93,7 +104,8 @@
     "lat": 49.178640521825756,
     "lng": 17.471802435840377,
     "perfectRadius": 50,
-    "closeRadius": 200
+    "closeRadius": 200,
+    "source": "Web (Public Domain)"
   },
   {
     "id": "photo_14",
@@ -101,7 +113,8 @@
     "lat": 49.187693798225965,
     "lng": 17.47143259682517,
     "perfectRadius": 50,
-    "closeRadius": 200
+    "closeRadius": 200,
+    "source": "Web (Public Domain)"
   },
   {
     "id": "photo_15",
@@ -109,7 +122,8 @@
     "lat": 49.162100819821234,
     "lng": 17.45065450810778,
     "perfectRadius": 50,
-    "closeRadius": 200
+    "closeRadius": 200,
+    "source": "Web (Public Domain)"
   },
   {
     "id": "photo_17",
@@ -117,7 +131,8 @@
     "lat": 49.17104126841936,
     "lng": 17.471331109915162,
     "perfectRadius": 50,
-    "closeRadius": 200
+    "closeRadius": 200,
+    "source": "Web (Public Domain)"
   },
   {
     "id": "photo_18",
@@ -125,7 +140,8 @@
     "lat": 49.19000616004068,
     "lng": 17.408658121222675,
     "perfectRadius": 50,
-    "closeRadius": 200
+    "closeRadius": 200,
+    "source": "Web (Public Domain)"
   },
   {
     "id": "photo_19",
@@ -133,7 +149,8 @@
     "lat": 49.18265721790759,
     "lng": 17.415109983155645,
     "perfectRadius": 50,
-    "closeRadius": 200
+    "closeRadius": 200,
+    "source": "Web (Public Domain)"
   },
   {
     "id": "photo_20",
@@ -141,7 +158,8 @@
     "lat": 49.18352813887841,
     "lng": 17.417119072743933,
     "perfectRadius": 50,
-    "closeRadius": 200
+    "closeRadius": 200,
+    "source": "Web (Public Domain)"
   },
   {
     "id": "photo_21",
@@ -149,7 +167,8 @@
     "lat": 49.19255972761514,
     "lng": 17.450594585259925,
     "perfectRadius": 50,
-    "closeRadius": 200
+    "closeRadius": 200,
+    "source": "Martin Gabriel"
   },
   {
     "id": "photo_22",
@@ -157,7 +176,8 @@
     "lat": 49.1770700658407,
     "lng": 17.457107081784994,
     "perfectRadius": 50,
-    "closeRadius": 200
+    "closeRadius": 200,
+    "source": "Martin Gabriel"
   },
   {
     "id": "photo_23",
@@ -165,7 +185,8 @@
     "lat": 49.170582398710245,
     "lng": 17.47194704031693,
     "perfectRadius": 50,
-    "closeRadius": 200
+    "closeRadius": 200,
+    "source": "Martin Gabriel"
   },
   {
     "id": "photo_24",
@@ -173,7 +194,8 @@
     "lat": 49.17205377098141,
     "lng": 17.4714952209026,
     "perfectRadius": 50,
-    "closeRadius": 200
+    "closeRadius": 200,
+    "source": "Martin Gabriel"
   },
   {
     "id": "photo_25",
@@ -181,7 +203,8 @@
     "lat": 49.17327875584476,
     "lng": 17.471841802004437,
     "perfectRadius": 50,
-    "closeRadius": 200
+    "closeRadius": 200,
+    "source": "Web (Public Domain)"
   },
   {
     "id": "photo_26",
@@ -189,7 +212,8 @@
     "lat": 49.18518336631649,
     "lng": 17.446113928084365,
     "perfectRadius": 50,
-    "closeRadius": 200
+    "closeRadius": 200,
+    "source": "Martin Gabriel"
   },
   {
     "id": "photo_27",
@@ -197,7 +221,8 @@
     "lat": 49.17723769153295,
     "lng": 17.457200597292722,
     "perfectRadius": 50,
-    "closeRadius": 200
+    "closeRadius": 200,
+    "source": "Martin Gabriel"
   },
   {
     "id": "photo_28",
@@ -205,6 +230,214 @@
     "lat": 49.192693273985995,
     "lng": 17.435950182907614,
     "perfectRadius": 50,
-    "closeRadius": 200
+    "closeRadius": 200,
+    "source": "Martin Gabriel"
+  },
+  {
+    "id": "photo_29",
+    "filename": "photo_29.jpg",
+    "lat": 49.19328511016348,
+    "lng": 17.439919401714015,
+    "perfectRadius": 50,
+    "closeRadius": 200,
+    "source": "Martin Gabriel"
+  },
+  {
+    "id": "photo_30",
+    "filename": "photo_30.jpg",
+    "lat": 49.16977579389098,
+    "lng": 17.472427632233604,
+    "perfectRadius": 50,
+    "closeRadius": 200,
+    "source": "Web (www.halenkovice.cz)"
+  },
+  {
+    "id": "photo_31",
+    "filename": "photo_31.jpg",
+    "lat": 49.170434413537286,
+    "lng": 17.470878584295246,
+    "perfectRadius": 50,
+    "closeRadius": 200,
+    "source": "Web (www.halenkovice.cz)"
+  },
+  {
+    "id": "photo_32",
+    "filename": "photo_32.jpg",
+    "lat": 49.16659132458489,
+    "lng": 17.471563600289365,
+    "perfectRadius": 50,
+    "closeRadius": 200,
+    "source": "Web (www.halenkovice.cz)"
+  },
+  {
+    "id": "photo_33",
+    "filename": "photo_33.jpg",
+    "lat": 49.16231741492047,
+    "lng": 17.450507788087133,
+    "perfectRadius": 50,
+    "closeRadius": 200,
+    "source": "Web (www.halenkovice.cz)"
+  },
+  {
+    "id": "photo_34",
+    "filename": "photo_34.jpg",
+    "lat": 49.19261729772345,
+    "lng": 17.450779730047792,
+    "perfectRadius": 50,
+    "closeRadius": 200,
+    "source": "Web (www.halenkovice.cz)"
+  },
+  {
+    "id": "photo_35",
+    "filename": "photo_35.jpg",
+    "lat": 49.173899405962516,
+    "lng": 17.472640518058395,
+    "perfectRadius": 50,
+    "closeRadius": 200,
+    "source": "Web (www.halenkovice.cz)"
+  },
+  {
+    "id": "photo_36",
+    "filename": "photo_36.jpg",
+    "lat": 49.16037518302727,
+    "lng": 17.47421697652498,
+    "perfectRadius": 50,
+    "closeRadius": 200,
+    "source": "Web (www.halenkovice.cz)"
+  },
+  {
+    "id": "photo_37",
+    "filename": "photo_37.jpg",
+    "lat": 49.18145915009837,
+    "lng": 17.459068675116885,
+    "perfectRadius": 50,
+    "closeRadius": 200,
+    "source": "Web (www.halenkovice.cz)"
+  },
+  {
+    "id": "photo_38",
+    "filename": "photo_38.jpg",
+    "lat": 49.181806093332284,
+    "lng": 17.453093711498283,
+    "perfectRadius": 50,
+    "closeRadius": 200,
+    "source": "Web (www.halenkovice.cz)"
+  },
+  {
+    "id": "photo_39",
+    "filename": "photo_39.jpg",
+    "lat": 49.17602330654354,
+    "lng": 17.45671984386794,
+    "perfectRadius": 50,
+    "closeRadius": 200,
+    "source": "Web (www.halenkovice.cz)"
+  },
+  {
+    "id": "photo_40",
+    "filename": "photo_40.jpeg",
+    "lat": 49.175200177645245,
+    "lng": 17.46022963544423,
+    "perfectRadius": 50,
+    "closeRadius": 200,
+    "source": "Web (www.halenkovice.cz)"
+  },
+  {
+    "id": "photo_41",
+    "filename": "photo_41.jpg",
+    "lat": 49.16493958496781,
+    "lng": 17.471984595167953,
+    "perfectRadius": 50,
+    "closeRadius": 200,
+    "source": "Web (www.halenkovice.cz)"
+  },
+  {
+    "id": "photo_42",
+    "filename": "photo_42.jpg",
+    "lat": 49.18751480040902,
+    "lng": 17.47134789681853,
+    "perfectRadius": 50,
+    "closeRadius": 200,
+    "source": "Web (www.halenkovice.cz)"
+  },
+  {
+    "id": "photo_43",
+    "filename": "photo_43.jpg",
+    "lat": 49.17297941557797,
+    "lng": 17.47167549870201,
+    "perfectRadius": 50,
+    "closeRadius": 200,
+    "source": "Web (www.halenkovice.cz)"
+  },
+  {
+    "id": "photo_44",
+    "filename": "photo_44.jpg",
+    "lat": 49.18652983932233,
+    "lng": 17.45250000056832,
+    "perfectRadius": 50,
+    "closeRadius": 200,
+    "source": "Web (www.halenkovice.cz)"
+  },
+  {
+    "id": "photo_45",
+    "filename": "photo_45.jpg",
+    "lat": 49.170456981963454,
+    "lng": 17.465016288098223,
+    "perfectRadius": 50,
+    "closeRadius": 200,
+    "source": "Web (www.halenkovice.cz)"
+  },
+  {
+    "id": "photo_46",
+    "filename": "photo_46.jpg",
+    "lat": 49.15948774582975,
+    "lng": 17.464934839788263,
+    "perfectRadius": 50,
+    "closeRadius": 200,
+    "source": "Web (www.halenkovice.cz)"
+  },
+  {
+    "id": "photo_47",
+    "filename": "photo_47.jpg",
+    "lat": 49.159992037716194,
+    "lng": 17.474175557733783,
+    "perfectRadius": 50,
+    "closeRadius": 200,
+    "source": "Web (www.halenkovice.cz)"
+  },
+  {
+    "id": "photo_48",
+    "filename": "photo_48.jpg",
+    "lat": 49.15997074135313,
+    "lng": 17.47416392493346,
+    "perfectRadius": 50,
+    "closeRadius": 200,
+    "source": "Web (www.halenkovice.cz)"
+  },
+  {
+    "id": "photo_49",
+    "filename": "photo_49.jpg",
+    "lat": 49.18014332140257,
+    "lng": 17.48475918322862,
+    "perfectRadius": 50,
+    "closeRadius": 200,
+    "source": "Web (www.halenkovice.cz)"
+  },
+  {
+    "id": "photo_50",
+    "filename": "photo_50.jpg",
+    "lat": 49.18556020703076,
+    "lng": 17.47355251301348,
+    "perfectRadius": 50,
+    "closeRadius": 200,
+    "source": "Web (www.halenkovice.cz)"
+  },
+  {
+    "id": "photo_51",
+    "filename": "photo_51.jpg",
+    "lat": 49.16031659020418,
+    "lng": 17.464936594468632,
+    "perfectRadius": 50,
+    "closeRadius": 200,
+    "source": "Web (Public Domain)"
   }
 ]
