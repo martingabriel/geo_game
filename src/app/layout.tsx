@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://poznej-halenkovice.cz'),
   title: 'Poznej Halenkovice',
   description: 'Poznáš, kde byly pořízeny tyto fotky z Halenkovic?',
-  icons: { icon: '/halenkovice_znak.png' },
+  icons: { icon: '/halenkovice_logo.png' },
 }
 
 export default function RootLayout({
