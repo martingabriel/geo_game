@@ -16,8 +16,8 @@ export default async function Home() {
         <div className="text-center space-y-4">
           <div className="flex justify-center relative">
             <img
-              src="/halenkovice_znak.png"
-              alt="Znak obce Halenkovice"
+              src="/halenkovice_prapor.jpg"
+              alt="Prapor obce Halenkovice"
               className="h-28 w-auto drop-shadow-lg"
             />
             <div className="absolute right-0 top-0">
