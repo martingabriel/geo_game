@@ -20,7 +20,7 @@ export default function RootLayout({
     <html lang="cs">
       <head>
         {/* Prevent flash of light mode when dark theme is saved in localStorage */}
-        <script dangerouslySetInnerHTML={{ __html: `try{const t=localStorage.getItem('theme');if(t==='dark')document.documentElement.classList.add('dark')}catch{}` }} />
+        <script dangerouslySetInnerHTML={{ __html: `try{const t=localStorage.getItem('theme');if(t!=='light')document.documentElement.classList.add('dark')}catch{}` }} />
       </head>
       <body className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-50 antialiased">
         <ThemeProvider>
