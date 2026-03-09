@@ -12,10 +12,15 @@ export default function AboutApp() {
           Halenkovice. Nevzniká za ní žádný příjem ani komerční záměr.
         </p>
         <p>
-          Všechny fotografie použité ve hře jsou buď pořízeny autorem této aplikace, nebo
-          pocházejí z volných zdrojů na internetu pod licencí{' '}
+          Všechny fotografie použité ve hře jsou buď pořízeny autorem této aplikace, nebo pocházejí
+          z fotogalerie webu{' '}
+          <a href="https://www.halenkovice.cz" target="_blank" rel="noopener noreferrer"
+             className="font-medium text-gray-700 dark:text-gray-300 hover:underline">
+            www.halenkovice.cz
+          </a>{' '}
+          se svolením obce Halenkovice k jejich sdílení, nebo z volných zdrojů na internetu pod licencí{' '}
           <span className="font-medium text-gray-700 dark:text-gray-300">CC0 Public Domain</span> — tedy bez
-          jakýchkoliv autorských omezení.
+          jakýchkoliv autorských omezení. U každé fotografie je uveden zdroj.
         </p>
       </div>
     </details>
