@@ -5,7 +5,7 @@ import { Analytics } from '@vercel/analytics/next'
 import { ThemeProvider } from '@/components/ThemeProvider'
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://poznej-halenkovice.online'),
+  metadataBase: new URL('https://poznej-halenkovice.cz'),
   title: 'Poznej Halenkovice',
   description: 'Poznáš, kde byly pořízeny tyto fotky z Halenkovic?',
   icons: { icon: '/halenkovice_znak.png' },

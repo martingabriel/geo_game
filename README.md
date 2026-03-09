@@ -2,7 +2,7 @@
 
 A GeoGuessr-style geography game for the village of Halenkovice, Czech Republic. Players are shown photos taken around the village and must place a pin on a map to guess where each photo was taken.
 
-**Live:** [poznej-halenkovice.online](https://poznej-halenkovice.online)
+**Live:** [poznej-halenkovice.cz](https://poznej-halenkovice.cz)
 
 ## How it works
 

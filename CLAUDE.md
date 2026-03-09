@@ -6,7 +6,7 @@
 - **Photos**: Local filesystem — `img/` (root, committed to git), metadata in `data/photos.json`
 - **Database**: Vercel Postgres (`@vercel/postgres`) — leaderboard + guess analytics
 - **Analytics**: Vercel Analytics (`@vercel/analytics/next`) — page views
-- **Hosting**: Vercel (poznej-halenkovice.online)
+- **Hosting**: Vercel (poznej-halenkovice.cz)
 
 ## Project Structure
 ```
