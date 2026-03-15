@@ -8,11 +8,9 @@ export default function HowToPlay() {
 
       <div className="mt-3 space-y-3">
         <p>
-          Úkolem je uhodnout místo, kde byla fotografie pořízena (ne co je na fotografii vyfoceno).
-        </p>
-        <p>
           Zobrazí se fotka pořízená někde v obci. Klikni na mapu a umísti svůj tip co nejblíže
-          skutečnému místu, pak potvrď tip.
+          skutečnému místu, pak potvrď tip. Úkolem je uhodnout místo, kde byla fotografie pořízena
+          (ne co je na fotografii vyfoceno).
         </p>
 
         <div>
