@@ -67,7 +67,7 @@ export async function generateShareCard(data: ShareCardData): Promise<Blob> {
 
   // Emblem
   try {
-    const emblem = await loadImage('/halenkovice_znak.png')
+    const emblem = await loadImage('/halenkovice_logo.png')
     const emblemSize = 180
     ctx.drawImage(emblem, W / 2 - emblemSize / 2, 40, emblemSize, emblemSize)
   } catch { /* optional */ }
