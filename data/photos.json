@@ -439,5 +439,32 @@
     "perfectRadius": 50,
     "closeRadius": 200,
     "source": "Web (Public Domain)"
+  },
+  {
+    "id": "photo_52",
+    "filename": "photo_52.jpg",
+    "lat": 49.16214468146896,
+    "lng": 17.450577352464585,
+    "perfectRadius": 50,
+    "closeRadius": 200,
+    "source": "Martin Gabriel"
+  },
+  {
+    "id": "photo_53",
+    "filename": "photo_53.jpg",
+    "lat": 49.15697119958585,
+    "lng": 17.454310396495337,
+    "perfectRadius": 50,
+    "closeRadius": 200,
+    "source": "Martin Gabriel"
+  },
+  {
+    "id": "photo_54",
+    "filename": "photo_54.jpg",
+    "lat": 49.15077004441432,
+    "lng": 17.45682152737947,
+    "perfectRadius": 50,
+    "closeRadius": 200,
+    "source": "Martin Gabriel"
   }
 ]
