@@ -12,6 +12,9 @@ export default function AboutApp() {
           Halenkovice. Nevzniká za ní žádný příjem ani komerční záměr.
         </p>
         <p>
+          Úkolem je uhodnout místo, kde byla fotografie pořízena (ne co je na fotografii vyfoceno).
+        </p>
+        <p>
           Všechny fotografie použité ve hře jsou buď pořízeny autorem této aplikace, nebo pocházejí
           z fotogalerie webu{' '}
           <a href="https://www.halenkovice.cz" target="_blank" rel="noopener noreferrer"
