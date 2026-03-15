@@ -12,26 +12,24 @@ export default async function Home() {
     <main className="min-h-screen bg-gray-50 dark:bg-gray-900 flex flex-col items-center justify-center px-4 py-12">
       <div className="w-full max-w-md space-y-8">
 
+        {/* Dark mode toggle — top right, no overlap */}
+        <div className="flex justify-end">
+          <DarkModeToggle />
+        </div>
+
         {/* Hero */}
         <div className="text-center space-y-4">
-          <div className="flex justify-center relative">
-            <img
-              src="/halenkovice_prapor.jpg"
-              alt="Prapor obce Halenkovice"
-              className="h-28 w-auto drop-shadow-lg"
-            />
-            <div className="absolute right-0 top-0">
-              <DarkModeToggle />
-            </div>
-          </div>
-          <div>
-            <h1 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-50">
-              Poznej Halenkovice
-            </h1>
-            <p className="mt-1 text-gray-500 dark:text-gray-400 text-sm">
-              Poznáš, kde byly pořízeny tyto fotky? Uhádni místo na mapě!
-            </p>
-          </div>
+          <h1 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-50">
+            Poznej Halenkovice
+          </h1>
+          <img
+            src="/halenkovice_prapor.jpg"
+            alt="Prapor obce Halenkovice"
+            className="h-28 w-auto drop-shadow-lg mx-auto"
+          />
+          <p className="text-gray-500 dark:text-gray-400 text-sm">
+            Poznáš, kde byly pořízeny tyto fotky? Uhádni místo na mapě!
+          </p>
         </div>
 
         {/* Promo quote */}
