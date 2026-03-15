@@ -44,7 +44,8 @@ export default function GamePage() {
       const p = JSON.parse(rawPhotos) as Photo[]
       setSession(s)
       setPhotos(p)
-      setPhase('guessing')
+      const isGameOver = s.currentRound >= s.totalRounds || s.livesRemaining === 0
+      setPhase(isGameOver ? 'finished' : 'guessing')
     } catch {
       router.replace('/')
     }
