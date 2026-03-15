@@ -29,7 +29,7 @@ export default function ScoreBreakdown({ results, playerName }: ScoreBreakdownPr
   return (
     <div className="space-y-4">
       <div className="text-center space-y-1">
-        <p className="text-gray-500 dark:text-gray-400 text-sm">Konec hry, {playerName}!</p>
+        <p className="text-gray-500 dark:text-gray-400 text-sm">Konec hry</p>
         <p className="text-4xl font-bold text-gray-900 dark:text-gray-50">{total} b</p>
         <p className="text-sm text-gray-400 dark:text-gray-500">z {maxPossible} možných</p>
       </div>
