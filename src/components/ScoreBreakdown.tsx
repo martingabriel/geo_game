@@ -2,7 +2,6 @@ import type { RoundResult, ScoreTier } from '@/types/index'
 
 interface ScoreBreakdownProps {
   results: RoundResult[]
-  playerName: string
 }
 
 const TIER_BADGE: Record<ScoreTier, string> = {
@@ -22,7 +21,7 @@ function formatDistance(metres: number): string {
   return `${(metres / 1000).toFixed(1)} km`
 }
 
-export default function ScoreBreakdown({ results, playerName }: ScoreBreakdownProps) {
+export default function ScoreBreakdown({ results }: ScoreBreakdownProps) {
   const total = results.reduce((sum, r) => sum + r.points, 0)
   const maxPossible = results.length * 1000
 

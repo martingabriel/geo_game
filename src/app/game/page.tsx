@@ -183,7 +183,7 @@ export default function GamePage() {
     return (
       <main className="min-h-screen bg-gray-50 dark:bg-gray-900 px-4 py-10">
         <div className="max-w-xl mx-auto space-y-6">
-          <ScoreBreakdown results={session.results} playerName={session.playerName} />
+          <ScoreBreakdown results={session.results} />
 
           {/* Save to leaderboard */}
           <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-100 dark:border-gray-700 shadow-sm p-4 space-y-3">
