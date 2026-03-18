@@ -32,8 +32,8 @@ export default function HowToPlay() {
                     Blízko
                   </span>
                 </td>
-                <td className="py-1 text-gray-500 dark:text-gray-400">do 200 m</td>
-                <td className="py-1 text-right font-medium text-gray-700 dark:text-gray-300">500 bodů</td>
+                <td className="py-1 text-gray-500 dark:text-gray-400">50–200 m</td>
+                <td className="py-1 text-right font-medium text-gray-700 dark:text-gray-300">500–1 000 bodů</td>
               </tr>
               <tr>
                 <td className="py-1 pr-3">
@@ -46,6 +46,10 @@ export default function HowToPlay() {
               </tr>
             </tbody>
           </table>
+          <p className="mt-2 text-xs text-gray-500 dark:text-gray-400">
+            V pásmu Blízko se body počítají lineárně — čím blíže 50 m, tím více bodů (až 1 000),
+            čím blíže 200 m, tím méně (až 500).
+          </p>
         </div>
 
         <div>
