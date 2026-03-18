@@ -331,7 +331,7 @@ export default function GamePage() {
           <div className="pb-6">
             {guessLat == null && (
               <p className="text-center text-sm text-gray-400 dark:text-gray-500 mb-2">
-                Klikni na mapu a umísti svůj tip
+                Kde byla pořízena tato fotka? Klikni na mapu a umísti svůj tip
               </p>
             )}
             <button
