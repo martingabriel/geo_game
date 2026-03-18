@@ -27,13 +27,32 @@ describe('scoreGuess', () => {
     expect(result.points).toBe(1000)
   })
 
-  it('returns Close when just outside perfectRadius but within closeRadius', () => {
+  it('returns Close with linear points when just outside perfectRadius but within closeRadius', () => {
     // ~100 metres north (~0.0009 degrees latitude ≈ 100m)
+    // formula: round(1000 - ((100-50)/(200-50))*500) = round(1000 - 166.67) = 833
     const result = scoreGuess(49.1769, 17.457, testPhoto)
     expect(result.distanceMeters).toBeGreaterThan(testPhoto.perfectRadius)
     expect(result.distanceMeters).toBeLessThanOrEqual(testPhoto.closeRadius)
     expect(result.tier).toBe('Close')
-    expect(result.points).toBe(500)
+    expect(result.points).toBeGreaterThan(800)
+    expect(result.points).toBeLessThan(870)
+  })
+
+  it('returns Close with ~750 pts at midpoint (~125m)', () => {
+    // ~125 metres north ≈ midpoint between 50m and 200m → ~750 pts
+    const result = scoreGuess(49.17713, 17.457, testPhoto)
+    expect(result.tier).toBe('Close')
+    expect(result.points).toBeGreaterThan(720)
+    expect(result.points).toBeLessThan(780)
+  })
+
+  it('returns Close with ~500 pts near closeRadius boundary (~199m)', () => {
+    // ~199 metres north → nearly 500 pts
+    const result = scoreGuess(49.17779, 17.457, testPhoto)
+    expect(result.distanceMeters).toBeLessThanOrEqual(testPhoto.closeRadius)
+    expect(result.tier).toBe('Close')
+    expect(result.points).toBeGreaterThan(490)
+    expect(result.points).toBeLessThan(520)
   })
 
   it('returns Far when beyond closeRadius', () => {

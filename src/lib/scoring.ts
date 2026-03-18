@@ -10,7 +10,7 @@ export interface ScoreResult {
 /**
  * Score a player's guess against the actual photo location.
  * - Distance ≤ perfectRadius → Perfect, 1000 pts
- * - Distance ≤ closeRadius  → Close,   500 pts
+ * - Distance ≤ closeRadius  → Close,   500–1000 pts (linear interpolation)
  * - Distance > closeRadius  → Far,     0 pts
  */
 export function scoreGuess(
@@ -28,7 +28,9 @@ export function scoreGuess(
     points = 1000
   } else if (distanceMeters <= photo.closeRadius) {
     tier = 'Close'
-    points = 500
+    points = Math.round(
+      1000 - ((distanceMeters - photo.perfectRadius) / (photo.closeRadius - photo.perfectRadius)) * 500
+    )
   } else {
     tier = 'Far'
     points = 0
